@@ -24,7 +24,7 @@ const DashboardHeader = () => {
               <span className="text-primary-foreground font-bold text-sm">AI</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-foreground">Tax Intelligence</h1>
+              <h1 className="text-xl font-bold text-foreground leading-relaxed">Tax Intelligence</h1>
               <p className="text-xs text-muted-foreground">Predictive Analytics & Automation</p>
             </div>
           </div>
