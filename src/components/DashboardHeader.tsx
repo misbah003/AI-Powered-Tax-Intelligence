@@ -1,8 +1,11 @@
-import { Bell, Search, Settings, User } from "lucide-react";
+import { Bell, Search, Settings, User, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useTheme } from "next-themes";
 
 const DashboardHeader = () => {
+  const { theme, setTheme } = useTheme();
+
   return (
     <header className="bg-card/60 backdrop-blur-xl border-b border-border/50 px-6 py-4">
       <div className="flex items-center justify-between">
@@ -29,6 +32,14 @@ const DashboardHeader = () => {
           
           <Button variant="ghost" size="icon">
             <Bell className="h-4 w-4" />
+          </Button>
+          
+          <Button 
+            variant="ghost" 
+            size="icon"
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          >
+            {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </Button>
           
           <Button variant="ghost" size="icon">
